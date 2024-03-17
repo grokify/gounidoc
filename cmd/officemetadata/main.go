@@ -44,7 +44,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Printf(opts.APIKey())
+	fmt.Println(opts.APIKey())
 
 	err = gounidoc.SetMeteredKey(opts.APIKey())
 	if err != nil {
@@ -54,6 +54,6 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmtutil.PrintJSON(m)
+	fmtutil.MustPrintJSON(m)
 	fmt.Println("DONE")
 }
