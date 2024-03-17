@@ -18,16 +18,16 @@ type Metadata struct {
 	Title          string
 }
 
-func ExportMetadata(cpo common.CoreProperties) Metadata {
+func ExportMetadata(cp common.CoreProperties) Metadata {
 	return Metadata{
-		Author:         cpo.Author(),
-		Category:       cpo.Category(),
-		ContentStatus:  cpo.ContentStatus(),
-		Created:        cpo.Created(),
-		Description:    cpo.Description(),
-		LastModifiedBy: cpo.LastModifiedBy(),
-		Modified:       cpo.Modified(),
-		Title:          cpo.Title(),
+		Author:         cp.Author(),
+		Category:       cp.Category(),
+		ContentStatus:  cp.ContentStatus(),
+		Created:        cp.Created(),
+		Description:    cp.Description(),
+		LastModifiedBy: cp.LastModifiedBy(),
+		Modified:       cp.Modified(),
+		Title:          cp.Title(),
 	}
 }
 
