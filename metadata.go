@@ -31,7 +31,7 @@ func ExportMetadata(cp common.CoreProperties) Metadata {
 	}
 }
 
-func ReadFilePresentationMetadata(filename string) (Metadata, error) {
+func ReadFileMetadataPresentation(filename string) (Metadata, error) {
 	if pres, err := presentation.Open(filename); err != nil {
 		return Metadata{}, err
 	} else {

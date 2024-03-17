@@ -50,7 +50,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	m, err := gounidoc.ReadFilePresentationMetadata(opts.Filename())
+	m, err := gounidoc.ReadFileMetadataPresentation(opts.Filename())
 	if err != nil {
 		log.Fatal(err)
 	}
