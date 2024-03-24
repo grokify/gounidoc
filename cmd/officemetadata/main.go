@@ -7,6 +7,7 @@ import (
 	"strings"
 
 	"github.com/grokify/gounidoc"
+	"github.com/grokify/gounidoc/uniofficeutil"
 	"github.com/grokify/mogo/config"
 	"github.com/grokify/mogo/fmt/fmtutil"
 )
@@ -50,7 +51,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	m, err := gounidoc.ReadFileMetadataPresentation(opts.Filename())
+	m, err := uniofficeutil.ReadFileMetadataPresentation(opts.Filename())
 	if err != nil {
 		log.Fatal(err)
 	}

@@ -1,4 +1,4 @@
-package gounidoc
+package uniofficeutil
 
 import (
 	"time"
