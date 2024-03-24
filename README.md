@@ -20,6 +20,8 @@
  [license-svg]: https://img.shields.io/badge/license-MIT-blue.svg
  [license-url]: https://github.com/grokify/gounidoc/blob/master/LICENSE
 
+![](logo_unidoc.png)
+
 `gounidoc` is a module for using [UniDoc](https://unidoc.io/) services for PDF and Office documents.
 
 ## References
