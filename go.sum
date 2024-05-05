@@ -14,8 +14,8 @@ github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSs
 github.com/gabriel-vasile/mimetype v1.4.3 h1:in2uUcidCuFcDKtdcBxlR0rJ1+fsokWf+uqxgUFjbI0=
 github.com/gabriel-vasile/mimetype v1.4.3/go.mod h1:d8uq/6HKRL6CGdk+aubisF/M5GcPfT7nKyLpA0lbSSk=
 github.com/google/gofuzz v1.0.0/go.mod h1:dBl0BpW6vV/+mYPU4Po3pmUjxk6FQPldtuIdl/M65Eg=
-github.com/grokify/mogo v0.63.9 h1:yBqez+hW1qRB0Y39ReQe+0ey68txUV5hm/HsV8h3hYY=
-github.com/grokify/mogo v0.63.9/go.mod h1:F0MM5/mXjoykX9ZLjGGL/HHWZz5xPcDk03jQgWWnmjY=
+github.com/grokify/mogo v0.63.10 h1:E12zZXTehbl/2ejwZRlE9VpE0b75KlF3HIlasjyvgDs=
+github.com/grokify/mogo v0.63.10/go.mod h1:qqEBSGkFlK3gpeBT4OOgXu48ZJYfzCrd+BNLs4CGF8A=
 github.com/huandu/xstrings v1.4.0 h1:D17IlohoQq4UcpqD7fDk80P7l+lwAmlFaBHgOipl2FU=
 github.com/huandu/xstrings v1.4.0/go.mod h1:y5/lhBue+AyNmUVz9RLU9xbLR0o4KIIExikq4ovT0aE=
 github.com/jessevdk/go-flags v1.5.0 h1:1jKYvbxEjfUl0fmqTCOfonvskHHXMjBySTLW4y9LFvc=
