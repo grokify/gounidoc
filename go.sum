@@ -65,8 +65,8 @@ github.com/unidoc/timestamp v0.0.0-20200412005513-91597fd3793a h1:RLtvUhe4DsUDl6
 github.com/unidoc/timestamp v0.0.0-20200412005513-91597fd3793a/go.mod h1:j+qMWZVpZFTvDey3zxUkSgPJZEX33tDgU/QIA0IzCUw=
 github.com/unidoc/unichart v0.3.0 h1:VX1j5yzhjrR3f2flC03Yat6/WF3h7Z+DLEvJLoTGhoc=
 github.com/unidoc/unichart v0.3.0/go.mod h1:8JnLNKSOl8yQt1jXewNgYFHhFm5M6/ZiaydncFDpakA=
-github.com/unidoc/unioffice v1.35.0 h1:jzuHjSNrR7w/eP7MPFd2YVLFI7ehVFwPbnStFBJShsg=
-github.com/unidoc/unioffice v1.35.0/go.mod h1:VL/S9i/xd2zYqZCUzO6CFPr3kM4iKj/tLcEcthAilgU=
+github.com/unidoc/unioffice v1.36.0 h1:9kEUK3hQhVAB7g3lROsvCrSMZsxSwFmC1UiMox7RohQ=
+github.com/unidoc/unioffice v1.36.0/go.mod h1:VL/S9i/xd2zYqZCUzO6CFPr3kM4iKj/tLcEcthAilgU=
 github.com/unidoc/unipdf/v3 v3.62.0 h1:CVsxq6k1SSIrprotlFvq6iBhA+5745dWaApB0LKtGcc=
 github.com/unidoc/unipdf/v3 v3.62.0/go.mod h1:0OIzSHHno23Y8WzaK+852abK8d3AxUZ1GQkMqpyCzu8=
 github.com/unidoc/unitype v0.4.0 h1:/TMZ3wgwfWWX64mU5x2O9no9UmoBqYCB089LYYqHyQQ=
