@@ -3,7 +3,7 @@ module github.com/grokify/gounidoc
 go 1.22.1
 
 require (
-	github.com/grokify/mogo v0.64.11
+	github.com/grokify/mogo v0.65.2
 	github.com/unidoc/unioffice v1.36.0
 	github.com/unidoc/unipdf/v3 v3.62.0
 )
@@ -30,12 +30,12 @@ require (
 	github.com/unidoc/timestamp v0.0.0-20200412005513-91597fd3793a // indirect
 	github.com/unidoc/unichart v0.3.0 // indirect
 	github.com/unidoc/unitype v0.4.0 // indirect
-	golang.org/x/crypto v0.27.0 // indirect
-	golang.org/x/exp v0.0.0-20240904232852-e7e105dedf7e // indirect
-	golang.org/x/image v0.20.0 // indirect
-	golang.org/x/net v0.29.0 // indirect
-	golang.org/x/sys v0.25.0 // indirect
-	golang.org/x/text v0.18.0 // indirect
+	golang.org/x/crypto v0.28.0 // indirect
+	golang.org/x/exp v0.0.0-20241009180824-f66d83c29e7c // indirect
+	golang.org/x/image v0.21.0 // indirect
+	golang.org/x/net v0.30.0 // indirect
+	golang.org/x/sys v0.26.0 // indirect
+	golang.org/x/text v0.19.0 // indirect
 	golang.org/x/xerrors v0.0.0-20240716161551-93cc26a95ae9 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
