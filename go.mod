@@ -5,7 +5,7 @@ go 1.22.1
 require (
 	github.com/grokify/mogo v0.64.11
 	github.com/unidoc/unioffice v1.36.0
-	github.com/unidoc/unipdf/v3 v3.62.0
+	github.com/unidoc/unipdf/v3 v3.63.0
 )
 
 require (
