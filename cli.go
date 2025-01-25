@@ -1,10 +1,15 @@
 package gounidoc
 
-import "github.com/unidoc/unioffice/common/license"
+import (
+	uniLicenseOffice "github.com/unidoc/unioffice/common/license"
+	uniLicensePDF "github.com/unidoc/unipdf/v3/common/license"
+)
 
 const (
-	EnvUnidocKey  = "UNIDOC_KEY"
-	EnvUnidocFile = "UNIDOC_FILE"
+	EnvUnidocKey       = "UNIDOC_KEY"
+	EnvUnidocKeyOffice = "UNIDOC_KEY_OFFICE"
+	EnvUnidocKeyPDF    = "UNIDOC_KEY_PDF"
+	EnvUnidocFile      = "UNIDOC_FILE"
 )
 
 type Options struct {
@@ -12,8 +17,16 @@ type Options struct {
 	File string `short:"f" long:"file" description:"File to read metadata for"`
 }
 
-func SetMeteredKey(key string) error {
-	// Make sure to load your metered License API key prior to using the library.
-	// If you need a key, you can sign up and create a free one at https://cloud.unidoc.io
-	return license.SetMeteredKey(key)
+func SetMeteredKey(officeKey, pdfKey string) error {
+	if officeKey != "" {
+		if err := uniLicenseOffice.SetMeteredKey(officeKey); err != nil {
+			return err
+		}
+	}
+	if pdfKey != "" {
+		if err := uniLicensePDF.SetMeteredKey(officeKey); err != nil {
+			return err
+		}
+	}
+	return nil
 }

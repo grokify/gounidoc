@@ -47,7 +47,7 @@ func main() {
 
 	fmt.Println(opts.APIKey())
 
-	err = gounidoc.SetMeteredKey(opts.APIKey())
+	err = gounidoc.SetMeteredKey(opts.APIKey(), "")
 	if err != nil {
 		log.Fatal(err)
 	}
