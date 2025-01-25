@@ -28,7 +28,7 @@ func main() {
 		opts.OutputFile = opts.InputFile + ".pdf"
 	}
 
-	err = uniofficeutil.DOCXToPDF(opts.InputFile, opts.OutputFile)
+	err = uniofficeutil.ConvertDOCXFileToPDFFile(opts.InputFile, opts.OutputFile)
 	if err != nil {
 		slog.Error(errorsutil.NewErrorWithLocation(err.Error()).Error())
 		logutil.FatalErr(err)

@@ -6,7 +6,7 @@ import (
 	"github.com/unidoc/unioffice/document/convert"
 )
 
-func DOCXToPDF(inputFilenameDOCX, outputFilenamePDF string) error {
+func ConvertDOCXFileToPDFFile(inputFilenameDOCX, outputFilenamePDF string) error {
 	doc, err := document.Open(inputFilenameDOCX)
 	if err != nil {
 		err = errorsutil.NewErrorWithLocation(err.Error())
