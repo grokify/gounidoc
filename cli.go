@@ -1,6 +1,8 @@
 package gounidoc
 
 import (
+	"os"
+
 	uniLicenseOffice "github.com/unidoc/unioffice/common/license"
 	uniLicensePDF "github.com/unidoc/unipdf/v3/common/license"
 )
@@ -15,6 +17,19 @@ const (
 type Options struct {
 	Key  string `short:"k" long:"key" description:"UniDoc metered API key"`
 	File string `short:"f" long:"file" description:"File to read metadata for"`
+}
+
+func SetMeteredKeyEnv() error {
+	keyAll := os.Getenv(EnvUnidocKey)
+	keyOff := os.Getenv(EnvUnidocKeyOffice)
+	keyPDF := os.Getenv(EnvUnidocKeyPDF)
+	if keyOff == "" {
+		keyOff = keyAll
+	}
+	if keyPDF == "" {
+		keyPDF = keyAll
+	}
+	return SetMeteredKey(keyOff, keyPDF)
 }
 
 func SetMeteredKey(officeKey, pdfKey string) error {
