@@ -12,7 +12,7 @@ import (
 
 // ConvertPDFFilePageToPNGFile reads a PDF file and converts the specified page to a PNG file
 // at the specified output path.
-func ConvertPDFFilePageToPNGFile(inputPath, outputPath string, pageNum, outputWidth uint) error {
+func ConvertPDFFilePageToPNGFile(inputPath, outputPath string, pageNum, outputWidth uint32) error {
 	if pageNum == 0 {
 		return errors.New("page num (1-indexed) cannot be zero")
 	} else if outputWidth == 0 {
@@ -31,7 +31,7 @@ func ConvertPDFFilePageToPNGFile(inputPath, outputPath string, pageNum, outputWi
 		return err
 	} else if numPages, err := pdfReader.GetNumPages(); err != nil {
 		return err
-	} else if pageNum > uint(numPages) {
+	} else if int(pageNum) > numPages {
 		return fmt.Errorf("requested page (%d) greater than page count (%d)", pageNum, numPages)
 	} else if pg, err := pdfReader.GetPage(int(pageNum)); err != nil {
 		return err
