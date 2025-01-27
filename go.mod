@@ -6,7 +6,7 @@ require (
 	github.com/grokify/mogo v0.67.7
 	github.com/jessevdk/go-flags v1.6.1
 	github.com/unidoc/unioffice v1.39.0
-	github.com/unidoc/unipdf/v3 v3.65.0
+	github.com/unidoc/unipdf/v3 v3.66.0
 )
 
 require (
