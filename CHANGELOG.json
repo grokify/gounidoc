@@ -1,0 +1,116 @@
+{
+  "irVersion": "1.0",
+  "project": "gounidoc",
+  "repository": "https://github.com/grokify/gounidoc",
+  "versioning": "semver",
+  "commitConvention": "conventional",
+  "maintainers": ["grokify", "johncwang@gmail.com"],
+  "releases": [
+    {
+      "version": "v0.4.0",
+      "date": "2025-05-20",
+      "highlights": [
+        { "description": "Unified CLI with 16 commands for PDF and Office document operations" },
+        { "description": "MCP server with 12 tools for AI agent integration via omniskill pattern" },
+        { "description": "PDF merge, split, and page extraction capabilities" },
+        { "description": "Batch conversion with glob patterns and progress reporting" },
+        { "description": "XLSX and PPTX info commands for spreadsheet and presentation analysis" }
+      ],
+      "added": [
+        { "description": "Unified Cobra CLI with 16 commands: pdf2docx, docx2pdf, docx-metadata, pptx-metadata, merge, split, extract, pagecount, batch-pdf2docx, batch-docx2pdf, xlsx-info, pptx-info, mcp, version, help, completion" },
+        { "description": "MCP server with 12 tools using omniskill pattern for AI agent integration" },
+        { "description": "PDF merge functionality via `MergePDFFiles()` combining multiple PDFs into one" },
+        { "description": "PDF split functionality via `SplitPDFFile()` extracting each page as a separate file" },
+        { "description": "PDF page extraction via `ExtractPDFPages()` for specific page ranges" },
+        { "description": "PDF page count via `GetPDFPageCount()` returning total pages" },
+        { "description": "Batch PDF to DOCX conversion with glob pattern support" },
+        { "description": "Batch DOCX to PDF conversion with glob pattern support" },
+        { "description": "Progress callback support for batch operations using `mogo/fmt/progress`" },
+        { "description": "XLSX info command returning sheet names and count" },
+        { "description": "PPTX info command returning slide count" },
+        { "description": "Typed methods on Skill struct for type safety: `ConvertPDFToDocx()`, `ConvertDocxToPDF()`, `MergePDFs()`, `SplitPDF()`, etc." },
+        { "description": "`ExpandGlobPatterns()` and `FilterByExtension()` helper functions for batch operations" },
+        { "description": "`BatchConversionResult` type with success/failure tracking and error details" }
+      ],
+      "documentation": [
+        { "description": "Comprehensive README.md with all 16 CLI commands and 12 MCP tools documented" },
+        { "description": "MkDocs site with getting-started, CLI reference, MCP server, library reference, and examples pages" }
+      ],
+      "dependencies": [
+        { "description": "Add `github.com/grokify/mogo/fmt/progress` for progress bar support in batch operations" },
+        { "description": "Add `github.com/mark3labs/mcp-go` for MCP server implementation" },
+        { "description": "Add `github.com/spf13/cobra` for unified CLI" }
+      ]
+    },
+    {
+      "version": "v0.3.0",
+      "date": "2025-01-25",
+      "commit": "9515e2f",
+      "highlights": [
+        { "description": "License support for UniPDF with environment variable configuration" },
+        { "description": "New docx2pdf CLI command for DOCX to PDF conversion" }
+      ],
+      "added": [
+        { "description": "License support for UniPDF via `SetLicenseAPIKey()` and `SetMeteredKey()`", "commit": "ad225a0" },
+        { "description": "`SetMeteredKeyEnv()` for loading metered key from `UNIDOC_LICENSE_API_KEY` environment variable", "commit": "8d87417" },
+        { "description": "`cmd/docx2pdf` CLI command for DOCX to PDF conversion", "commit": "be767d7" }
+      ],
+      "changed": [
+        { "description": "Rename `ConvertDOCXFileToPDFFile()` for consistency and clarity", "commit": "7083915" }
+      ],
+      "fixed": [
+        { "description": "Fix G115 integer overflow conversion lint warning in unipdfutil", "commit": "654f78b" }
+      ],
+      "dependencies": [
+        { "description": "Update github.com/unidoc/unipdf/v3 to 3.65.0", "commit": "f322491" },
+        { "description": "Update github.com/unidoc/unioffice to 1.38.0", "commit": "d01647b" },
+        { "description": "Update github.com/grokify/mogo to 0.65.6", "commit": "277d29c" }
+      ]
+    },
+    {
+      "version": "v0.2.1",
+      "date": "2024-08-31",
+      "commit": "191fe71",
+      "highlights": [
+        { "description": "Dependency updates for unipdf, unioffice, and mogo" }
+      ],
+      "dependencies": [
+        { "description": "Update github.com/unidoc/unipdf/v3 to 3.61.0", "commit": "db4b04a" },
+        { "description": "Update github.com/unidoc/unioffice to 1.35.0", "commit": "7bc5ef2" },
+        { "description": "Update github.com/grokify/mogo to 0.64.5", "commit": "4029c71" },
+        { "description": "Update golangci-lint-action to v6", "commit": "d4b5b58" }
+      ]
+    },
+    {
+      "version": "v0.2.0",
+      "date": "2024-03-24",
+      "commit": "905c4ee",
+      "highlights": [
+        { "description": "Add unipdfutil package for PDF operations including PDF to DOCX conversion" }
+      ],
+      "added": [
+        { "description": "`unipdfutil` package moved from github.com/grokify/goimage with PDF to DOCX conversion", "commit": "5a30386" }
+      ],
+      "changed": [
+        { "description": "Reorganize `uniofficeutil` package structure", "commit": "057d9db" }
+      ]
+    },
+    {
+      "version": "v0.1.0",
+      "date": "2024-03-17",
+      "commit": "ab5cfeb",
+      "highlights": [
+        { "description": "Initial release with Office document metadata extraction for DOCX, XLSX, and PPTX files" }
+      ],
+      "added": [
+        { "description": "`uniofficeutil` package for Office document operations", "commit": "85160ca" },
+        { "description": "`ReadFileMetadata()` for extracting metadata from DOCX files", "commit": "85160ca" },
+        { "description": "`ReadFileMetadataPresentation()` for extracting metadata from PPTX files", "commit": "85160ca" },
+        { "description": "`ExportMetadata` struct for unified metadata representation", "commit": "85160ca" }
+      ],
+      "documentation": [
+        { "description": "README.md with installation and usage instructions", "commit": "8e7244d" }
+      ]
+    }
+  ]
+}
