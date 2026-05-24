@@ -10,15 +10,15 @@ import (
 
 // WatermarkOptions configures watermark appearance.
 type WatermarkOptions struct {
-	Text      string   `json:"text"`       // Text watermark content
-	ImagePath string   `json:"image_path"` // Path to image watermark (alternative to text)
-	FontSize  float64  `json:"font_size"`  // Font size for text watermark
-	FontName  string   `json:"font_name"`  // Font name (e.g., Helvetica)
-	Color     string   `json:"color"`      // Hex color (e.g., "#FF0000")
-	Opacity   float64  `json:"opacity"`    // 0.0-1.0
-	Rotation  float64  `json:"rotation"`   // Degrees
-	Position  string   `json:"position"`   // center, top-left, top-right, bottom-left, bottom-right
-	Pages     []int    `json:"pages"`      // Empty = all pages
+	Text      string  `json:"text"`       // Text watermark content
+	ImagePath string  `json:"image_path"` // Path to image watermark (alternative to text)
+	FontSize  float64 `json:"font_size"`  // Font size for text watermark
+	FontName  string  `json:"font_name"`  // Font name (e.g., Helvetica)
+	Color     string  `json:"color"`      // Hex color (e.g., "#FF0000")
+	Opacity   float64 `json:"opacity"`    // 0.0-1.0
+	Rotation  float64 `json:"rotation"`   // Degrees
+	Position  string  `json:"position"`   // center, top-left, top-right, bottom-left, bottom-right
+	Pages     []int   `json:"pages"`      // Empty = all pages
 }
 
 // DefaultWatermarkOptions returns default watermark options.
@@ -185,4 +185,3 @@ func calculatePosition(position string, pageWidth, pageHeight, objWidth, objHeig
 		return (pageWidth - objWidth) / 2, (pageHeight - objHeight) / 2
 	}
 }
-

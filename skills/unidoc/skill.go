@@ -19,9 +19,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/grokify/gounidoc/unipdfutil"
-	"github.com/grokify/gounidoc/uniofficeutil"
 	"github.com/plexusone/omniskill/skill"
+
+	"github.com/grokify/gounidoc/uniofficeutil"
+	"github.com/grokify/gounidoc/unipdfutil"
 )
 
 // Skill provides UniDoc document conversion tools.
@@ -1723,11 +1724,11 @@ func (s *Skill) images2pdfTool() skill.Tool {
 			}
 
 			return map[string]any{
-				"success":      true,
-				"input_paths":  imagePaths,
-				"output_path":  outputPath,
-				"image_count":  len(imagePaths),
-				"page_size":    opts.PageSize,
+				"success":     true,
+				"input_paths": imagePaths,
+				"output_path": outputPath,
+				"image_count": len(imagePaths),
+				"page_size":   opts.PageSize,
 			}, nil
 		},
 	)

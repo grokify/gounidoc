@@ -75,7 +75,7 @@ func ExtractPDFTextToFile(inputPath, outputPath string) error {
 		return err
 	}
 
-	if err := os.WriteFile(outputPath, []byte(text), 0644); err != nil {
+	if err := os.WriteFile(outputPath, []byte(text), 0600); err != nil {
 		return fmt.Errorf("failed to write output file: %w", err)
 	}
 
