@@ -1,7 +1,8 @@
 package uniofficeutil
 
 import (
-	"github.com/grokify/mogo/errors/errorsutil"
+	"fmt"
+
 	"github.com/unidoc/unioffice/document"
 	"github.com/unidoc/unioffice/document/convert"
 )
@@ -9,18 +10,14 @@ import (
 func ConvertDOCXFileToPDFFile(inputFilenameDOCX, outputFilenamePDF string) error {
 	doc, err := document.Open(inputFilenameDOCX)
 	if err != nil {
-		err = errorsutil.NewErrorWithLocation(err.Error())
-		return errorsutil.Wrapf(err, "error opening document (%s)", inputFilenameDOCX)
+		return fmt.Errorf("error opening document (%s): %w", inputFilenameDOCX, err)
 	}
 	defer doc.Close()
 
 	c := convert.ConvertToPdf(doc)
 
-	err = c.WriteToFile(outputFilenamePDF)
-	if err != nil {
-		err = errorsutil.NewErrorWithLocation(err.Error())
-		return errorsutil.Wrapf(err, "error converting/writing document (%s) from (%s)", outputFilenamePDF, inputFilenameDOCX)
-	} else {
-		return nil
+	if err := c.WriteToFile(outputFilenamePDF); err != nil {
+		return fmt.Errorf("error converting/writing document (%s) from (%s): %w", outputFilenamePDF, inputFilenameDOCX, err)
 	}
+	return nil
 }
