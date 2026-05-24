@@ -846,7 +846,7 @@ func runPDF2PNG(cmd *cobra.Command, args []string) error {
 
 	fmt.Printf("Converting: %s (page %d) -> %s\n", pdf2pngInput, pdf2pngPage, pdf2pngOutput)
 
-	if err := skill.ConvertPDFPageToPNG(ctx, pdf2pngInput, pdf2pngOutput, uint32(pdf2pngPage), uint32(pdf2pngWidth)); err != nil {
+	if err := skill.ConvertPDFPageToPNG(ctx, pdf2pngInput, pdf2pngOutput, uint32(pdf2pngPage), uint32(pdf2pngWidth)); err != nil { //nolint:gosec // G115: CLI flag values bounded by Cobra
 		return fmt.Errorf("conversion failed: %w", err)
 	}
 

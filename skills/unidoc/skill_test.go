@@ -171,7 +171,7 @@ func TestConvertPDFToDocx_DefaultOutput(t *testing.T) {
 	if err != nil {
 		t.Fatalf("failed to read input: %v", err)
 	}
-	if err := os.WriteFile(tempPDF, data, 0600); err != nil {
+	if err := os.WriteFile(tempPDF, data, 0600); err != nil { //nolint:gosec // G703: Test fixture path
 		t.Fatalf("failed to write temp file: %v", err)
 	}
 

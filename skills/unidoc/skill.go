@@ -9,6 +9,8 @@
 // The skill exposes both typed Go methods for direct use and MCP tools for
 // AI agent integration. CLI tools should use the typed methods for compile-time
 // type safety.
+//
+//nolint:dupl // Type-safe wrapper methods have similar structure by design
 package unidoc
 
 import (

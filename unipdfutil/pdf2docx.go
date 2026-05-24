@@ -215,12 +215,12 @@ func addTextWithLayout(doc *document.Document, pageText *extractor.PageText) {
 
 type textLine struct {
 	text      string
-	fontSize  float64
 	isHeading bool
 }
 
 // groupTextByLines groups text marks into lines and detects potential headings.
-func groupTextByLines(text string, marks extractor.TextMarkArray) []textLine {
+// The marks parameter is reserved for future font-size based heading detection.
+func groupTextByLines(text string, _ extractor.TextMarkArray) []textLine {
 	var lines []textLine
 	paragraphs := strings.Split(text, "\n")
 
