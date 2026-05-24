@@ -2,36 +2,36 @@ package main
 
 import (
 	"fmt"
-	"log/slog"
+	"log"
+	"os"
 
 	"github.com/grokify/gounidoc"
 	"github.com/grokify/gounidoc/uniofficeutil"
-	"github.com/grokify/mogo/errors/errorsutil"
-	"github.com/grokify/mogo/log/logutil"
 	"github.com/jessevdk/go-flags"
 )
 
 type Options struct {
-	InputFile  string `short:"d" long:"delete" description:"Delete subscription"`
-	OutputFile string `short:"r" long:"recreate" description:"Recreate subscription"`
+	InputFile  string `short:"i" long:"input" description:"Input DOCX file"`
+	OutputFile string `short:"o" long:"output" description:"Output PDF file"`
 }
 
 func main() {
 	opts := Options{}
 	_, err := flags.Parse(&opts)
-	logutil.FatalErr(err)
+	if err != nil {
+		os.Exit(1)
+	}
 
-	err = gounidoc.SetMeteredKeyEnv()
-	logutil.FatalErr(err)
+	if err := gounidoc.SetMeteredKeyEnv(); err != nil {
+		log.Fatalf("Error setting UniDoc key: %v", err)
+	}
 
 	if opts.OutputFile == "" && opts.InputFile != "" {
 		opts.OutputFile = opts.InputFile + ".pdf"
 	}
 
-	err = uniofficeutil.ConvertDOCXFileToPDFFile(opts.InputFile, opts.OutputFile)
-	if err != nil {
-		slog.Error(errorsutil.NewErrorWithLocation(err.Error()).Error())
-		logutil.FatalErr(err)
+	if err := uniofficeutil.ConvertDOCXFileToPDFFile(opts.InputFile, opts.OutputFile); err != nil {
+		log.Fatalf("Error converting DOCX to PDF: %v", err)
 	}
 
 	fmt.Println("DONE")
