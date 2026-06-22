@@ -3,10 +3,10 @@ module github.com/grokify/gounidoc
 go 1.26.0
 
 require (
-	github.com/grokify/mogo v0.74.5
+	github.com/grokify/mogo v0.74.6
 	github.com/jessevdk/go-flags v1.6.1
 	github.com/modelcontextprotocol/go-sdk v1.6.1
-	github.com/plexusone/omniskill v0.8.0
+	github.com/plexusone/omniskill v0.9.0
 	github.com/spf13/cobra v1.10.2
 	github.com/unidoc/unioffice v1.39.0
 	github.com/unidoc/unipdf/v3 v3.69.0
@@ -31,7 +31,7 @@ require (
 	github.com/joho/godotenv v1.5.1 // indirect
 	github.com/jpillora/backoff v1.0.0 // indirect
 	github.com/llgcode/draw2d v0.0.0-20231212091825-f55e0c776b44 // indirect
-	github.com/mattn/go-colorable v0.1.14 // indirect
+	github.com/mattn/go-colorable v0.1.15 // indirect
 	github.com/mattn/go-isatty v0.0.22 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/richardlehane/msoleps v1.0.3 // indirect
@@ -51,15 +51,15 @@ require (
 	go.uber.org/multierr v1.11.0 // indirect
 	golang.ngrok.com/muxado/v2 v2.0.1 // indirect
 	golang.ngrok.com/ngrok v1.13.0 // indirect
-	golang.org/x/crypto v0.51.0 // indirect
-	golang.org/x/exp v0.0.0-20260508232706-74f9aab9d74a // indirect
-	golang.org/x/image v0.40.0 // indirect
-	golang.org/x/net v0.55.0 // indirect
+	golang.org/x/crypto v0.53.0 // indirect
+	golang.org/x/exp v0.0.0-20260611194520-c48552f49976 // indirect
+	golang.org/x/image v0.41.0 // indirect
+	golang.org/x/net v0.56.0 // indirect
 	golang.org/x/oauth2 v0.36.0 // indirect
-	golang.org/x/sync v0.20.0 // indirect
-	golang.org/x/sys v0.45.0 // indirect
-	golang.org/x/term v0.43.0 // indirect
-	golang.org/x/text v0.37.0 // indirect
+	golang.org/x/sync v0.21.0 // indirect
+	golang.org/x/sys v0.46.0 // indirect
+	golang.org/x/term v0.44.0 // indirect
+	golang.org/x/text v0.38.0 // indirect
 	golang.org/x/xerrors v0.0.0-20240903120638-7835f813f4da // indirect
 	google.golang.org/protobuf v1.36.11 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
